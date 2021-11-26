@@ -150,7 +150,7 @@ public class RecipeBookScreen extends ContainerScreen<RecipeBookContainer> {
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
         super.mouseClicked(mouseX, mouseY, button);
 
-        if (button == 1 && mouseX >= searchBar.x && mouseX < searchBar.x + searchBar.getWidth() && mouseY >= searchBar.y && mouseY < searchBar.y + searchBar.getHeightRealms()) {
+        if (button == 1 && mouseX >= searchBar.x && mouseX < searchBar.x + searchBar.getWidth() && mouseY >= searchBar.y && mouseY < searchBar.y + searchBar.getHeight()) {
             searchBar.setText("");
             container.search(null);
             container.populateRecipeSlots();
@@ -284,7 +284,7 @@ public class RecipeBookScreen extends ContainerScreen<RecipeBookContainer> {
         }
 
 
-        searchBar.renderButton(matrixStack, mouseX, mouseY, partialTicks);
+        searchBar.renderWidget(matrixStack, mouseX, mouseY, partialTicks);
     }
 
     @Override
